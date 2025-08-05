@@ -492,6 +492,72 @@
             background: rgba(0, 98, 65, 0.1);
         }
         
+        /* Team Section Styles */
+        .team-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 100px 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 992px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .team-member {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .team-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 30px auto 20px;
+            border: 5px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-info {
+            padding: 0 30px 30px;
+        }
+
+        .team-name {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+
+        .team-role {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        
         /* Footer */
         footer {
             background: var(--dark);
@@ -673,6 +739,7 @@
                     <li><a href="#highlights"><i class="fas fa-star"></i> Highlights</a></li>
                     <li><a href="#model"><i class="fas fa-download"></i> Model</a></li>
                     <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="#team"><i class="fas fa-users"></i> Team</a></li>
                 </ul>
             </nav>
         </div>
@@ -866,6 +933,74 @@
             </div>
         </div>
     </section>
+    
+    <!-- Team Section -->
+    <section class="section team-section" id="team">
+        <div class="container">
+            <h2 class="section-title">Our Research Team</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 50px;">
+                Meet the dedicated team of analysts who conducted this comprehensive research on Crocs Inc.
+            </p>
+            
+            <div class="team-grid">
+                <!-- Row 1 -->
+                <div class="team-member">
+                    <img src="https://media.licdn.com/dms/image/v2/D5603AQGIjC3LZtbecA/profile-displayphoto-shrink_200_200/B56ZPPgUjjGkAY-/0/1734353178184?e=1757548800&v=beta&t=0vAcWUc5fkQ0agAvy8P7dG3svoTDVskeWgVXVNyg7LE" 
+                         alt="Jocelyn Chng" class="team-photo">
+                    <div class="team-info">
+                        <h3 class="team-name">Jocelyn Chng</h3>
+                        <p class="team-role">Vice-President</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <img src="https://media.licdn.com/dms/image/v2/D5603AQEnH7hc33FtoQ/profile-displayphoto-scale_200_200/B56ZhqN2CDH0Ag-/0/1754128671427?e=1757548800&v=beta&t=Lwk8JUHQmWY3JQpY7RmHx3-zNTbrDxE-QGBt1cjFdpI" 
+                         alt="Benice Chua" class="team-photo">
+                    <div class="team-info">
+                        <h3 class="team-name">Benice Chua</h3>
+                        <p class="team-role">Vice-President</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQGbcnaCsAjuAQ/profile-displayphoto-shrink_200_200/B4DZYD0kqBH4AY-/0/1743820836260?e=1757548800&v=beta&t=152G5C644MHD001ofT2xcoUueoqsm1eIIu3_N_8DGAc" 
+                         alt="Charlotte Chua" class="team-photo">
+                    <div class="team-info">
+                        <h3 class="team-name">Charlotte Chua</h3>
+                        <p class="team-role">Associate</p>
+                    </div>
+                </div>
+                
+                <!-- Row 2 -->
+                <div class="team-member">
+                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQEIFBRu1x27Eg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1712464684482?e=1757548800&v=beta&t=MS0pf_bqqGMInBcdoBdBYJ04kAqc5rBremJPTv4pFSw" 
+                         alt="Cristal Koh" class="team-photo">
+                    <div class="team-info">
+                        <h3 class="team-name">Cristal Koh</h3>
+                        <p class="team-role">Associate</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <img src="https://media.licdn.com/dms/image/v2/C5603AQG8Jczd7eEl2A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1650615669071?e=1757548800&v=beta&t=23wCHoT5UziuM6X52nSE5q3Ew8lJAO9S_V7DOissGBg" 
+                         alt="Dang Duong Nguyen" class="team-photo">
+                    <div class="team-info">
+                        <h3 class="team-name">Dang Duong Nguyen</h3>
+                        <p class="team-role">Analyst</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <img src="https://media.licdn.com/dms/image/v2/D5603AQFKB21kGGtIUg/profile-displayphoto-scale_200_200/B56Zg8xREEH0AY-/0/1753366205280?e=1757548800&v=beta&t=PCxk_7xP82e3bX4cW3y2FP0CqA9jA4S7e8-OVgmu9WU" 
+                         alt="Thurston Liang" class="team-photo">
+                    <div class="team-info">
+                        <h3 class="team-name">Thurston Liang</h3>
+                        <p class="team-role">Team Member</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -894,6 +1029,7 @@
                         <li><a href="#valuation"><i class="fas fa-chevron-right"></i> Valuation Analysis</a></li>
                         <li><a href="#highlights"><i class="fas fa-chevron-right"></i> Key Highlights</a></li>
                         <li><a href="#model"><i class="fas fa-chevron-right"></i> Financial Model</a></li>
+                        <li><a href="#team"><i class="fas fa-chevron-right"></i> Our Team</a></li>
                     </ul>
                 </div>
                 
@@ -946,7 +1082,7 @@
         }, { threshold: 0.1 });
         
         // Apply animations to cards and sections
-        document.querySelectorAll('.card, .stat-card, .download-box').forEach(el => {
+        document.querySelectorAll('.card, .stat-card, .download-box, .team-member').forEach(el => {
             el.style.opacity = "0";
             el.style.transform = "translateY(30px)";
             el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
